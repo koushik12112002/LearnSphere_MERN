@@ -35,7 +35,8 @@ import VerifyEmail from "./pages/VerifyEmail"
 import ViewCourse from "./pages/ViewCourse"
 import { getUserDetails } from "./services/operations/profileAPI"
 import { ACCOUNT_TYPE } from "./utils/constants"
-import YourHelper from "./pages/YourHelper"
+// import YourHelper from "./pages/YourHelper"
+import YourHelperGemini from "./pages/YourHelper_Gemini/Gemini"
 
 function App() {
   const dispatch = useDispatch()
@@ -60,6 +61,7 @@ function App() {
         <Route path="/codeEditor" element={<CodeEditor />} />
         <Route path="courses/:courseId" element={<CourseDetails />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
+        <Route path="/YourHelper" element={<YourHelperGemini />} />
         {/* Open Route - for Only Non Logged in User */}
         <Route
           path="login"
@@ -93,14 +95,14 @@ function App() {
             </OpenRoute>
           }
         />
-        <Route
+        {/* <Route
           path="YourHelper"
           element={
             <OpenRoute>
               <YourHelper/>
             </OpenRoute>
           }
-        />
+        /> */}
         <Route
           path="verify-email"
           element={
@@ -138,10 +140,6 @@ function App() {
               <Route
                 path="dashboard/enrolled-courses"
                 element={<EnrolledCourses />}
-              />
-              <Route
-                path="YourHelper"
-                element={<YourHelper />}
               />
               <Route path="/dashboard/cart" element={<Cart />} />
             </>

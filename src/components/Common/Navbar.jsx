@@ -69,6 +69,7 @@ function Navbar() {
         <Link to="/">
           <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
         </Link>
+        <p className=" text-richblack-200 font-edu-sa w-48 h-8 font-bold">LearnShpere</p>
         {/* Navigation links */}
         <nav className="hidden md:block">
           <ul className="flex gap-x-6 text-richblack-25">

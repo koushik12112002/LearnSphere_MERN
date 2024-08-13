@@ -12,6 +12,8 @@ import rootReducer from "./reducer";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./themeCodeEditor"
 
+import ContextProvider from "./pages/YourHelper_Gemini/context/Context";
+
 const store = configureStore({
   reducer: rootReducer,
 });
@@ -22,7 +24,9 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <ChakraProvider theme={theme}>
-          <App />
+          <ContextProvider>
+            <App />
+          </ContextProvider>
         </ChakraProvider>
         <Toaster />
       </BrowserRouter>
