@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Main.css";
 import { assets } from "../../assets/assets"; 
 import { Context } from "../../context/Context";
+import { Link } from "react-router-dom";
 
 const Main = () => {
     const {onSent,recentPrompt,showResult,loading,resultData,setInput,input}=useContext(Context);
@@ -12,8 +13,12 @@ const Main = () => {
         <div className="main">
             <div className="nav">
                 <div className="nav-part">
-                    <img className="result-data-pi" src={assets.advance} alt="" />
-                    <p>YourHelper</p>
+                    <Link to="/">
+                        <img className="result-data-pi" src={assets.advance} alt="" />
+                    </Link>
+                    <Link to="/">
+                        <p className="text-richblack-200 font-edu-sa w-48 h-8 font-bold text-2xl -translate-x-3">LearnSphere</p>
+                    </Link>
                 </div>
                 <div>
                     <img src={assets.new_profile} alt="" />
@@ -23,14 +28,14 @@ const Main = () => {
                 {!showResult
                 ?<>
                 <div className="greet">
-                    <p><span>Hello...</span></p>
-                    <p>How can I help you ?</p>
+                    <p><span className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text text-4xl font-semibold lg:w-[70%] ">Hello...</span></p>
+                    <p className="bg-gradient-to-b from-[#FF512F] to-[#F09819] bg-clip-text text-4xl font-semibold text-transparent lg:w-[70%] ">How can I help you ?</p>
 
                 </div>
                 <div className="cards">
                     <div className="card">
                         <p className="card-text">Suggest beautiful places to see on an upcoming road trip.</p>
-                        <img src={assets.compass_icon} alt="" />
+                        <img src={assets.compass_icon} alt="" className="bg-pink-600"/>
                     </div>
                     <div className="card">
                         <p>Briefly Summarize this concept : Urban Planning.</p>

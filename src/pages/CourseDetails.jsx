@@ -100,6 +100,7 @@ function CourseDetails() {
     studentsEnroled,
     createdAt,
   } = response.data?.courseDetails
+  console.log(response.data?.courseDetails);
 
   const handleBuyCourse = () => {
     if (token) {
@@ -151,8 +152,8 @@ function CourseDetails() {
               <div className="text-md flex flex-wrap items-center gap-2">
                 <span className="text-yellow-25">{avgReviewCount}</span>
                 <RatingStars Review_Count={avgReviewCount} Star_Size={24} />
-                <span>{`(${ratingAndReviews.length} reviews)`}</span>
-                <span>{`${studentsEnroled.length} students enrolled`}</span>
+                {/* <span>{`(${ratingAndReviews.length} reviews)`}</span> */}
+                {/* <span>{`${studentsEnroled.length} students enrolled`}</span> */}
               </div>
               <div>
                 <p className="">

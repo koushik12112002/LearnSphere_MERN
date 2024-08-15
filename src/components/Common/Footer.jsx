@@ -1,6 +1,7 @@
 import React from "react";
 import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
+import { BiLogoSass } from "react-icons/bi";
 
 // Images
 import Logo from "../../assets/Logo/Logo-Full-Light.png";
@@ -30,7 +31,10 @@ const Footer = () => {
           {/* Section 1 */}
           <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
             <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <p className=" font-mono font-bold w-[200px] h-[20px] text-xl">LearnSphere</p>
+              <div className=" flex gap-2">
+              <BiLogoSass className=" text-4xl bg-richblack-800 text-yellow-300 "/>
+              <p className="text-richblack-200 font-edu-sa w-48 h-8 font-bold text-lg mt-1">LearnSphere</p>
+              </div>
               {/* <img src={Logo} alt="" className="object-contain" /> */}
               <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Company

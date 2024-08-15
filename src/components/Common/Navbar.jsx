@@ -10,6 +10,7 @@ import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
+import { BiLogoSass } from "react-icons/bi";
 
 // const subLinks = [
 //   {
@@ -66,10 +67,10 @@ function Navbar() {
     >
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">
         {/* Logo */}
+        <BiLogoSass className=" text-4xl bg-richblack-900 text-yellow-300 translate-x-32"/>
         <Link to="/">
-          <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
+          <p className=" text-richblack-200 font-edu-sa w-48 h-8 font-bold text-2xl">LearnShpere</p>
         </Link>
-        <p className=" text-richblack-200 font-edu-sa w-48 h-8 font-bold">LearnShpere</p>
         {/* Navigation links */}
         <nav className="hidden md:block">
           <ul className="flex gap-x-6 text-richblack-25">
